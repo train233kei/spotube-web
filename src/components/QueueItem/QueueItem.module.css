@@ -1,0 +1,108 @@
+.main {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  height: 81px;
+  cursor: pointer;
+  position: relative;
+  padding-left: 20px;
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  text-align: left;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+  user-select: none;
+  transition: 0.2s linear;
+  font-family: "Nunito", sans-serif;
+}
+.main:hover {
+  /* background: #333;
+    box-shadow: -20px 0px 0px 0px #333, 20px 0px 0px 0px #333; */
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.main:hover .thumbnail {
+  filter: brightness(50%);
+}
+
+.main:hover .playIcon {
+  opacity: 1;
+}
+
+.thumbDiv {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  overflow: hidden;
+  border-radius: 5px;
+  min-width: 48px;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.34);
+  object-fit: cover;
+}
+
+.playIcon {
+  width: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.2s linear;
+}
+
+.textDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-width: calc(100% - 100px);
+}
+
+.title {
+  color: white;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.desc {
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.moreButton {
+  position: absolute !important;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.moreButton:hover .moreIcon {
+  color: white;
+}
+
+.mainDiv {
+  width: 100%;
+  position: relative;
+}
+
+.mainDiv:hover .moreIcon {
+  opacity: 1;
+}
+
+.moreIcon {
+  color: rgb(145, 145, 145);
+  opacity: 0;
+}
