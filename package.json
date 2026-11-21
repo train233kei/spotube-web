@@ -19,7 +19,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "postbuild": "cp build/index.html build/404.html && mkdir -p build/home build/search && cp build/index.html build/home/index.html && cp build/index.html build/search/index.html"
   },
   "eslintConfig": {
     "extends": [
